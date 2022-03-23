@@ -15,6 +15,11 @@ namespace LinkedList
             linkedList.AddNode(node3);
 
             linkedList.Display();
+
+            Node node4 = new Node(25);
+            linkedList.AppendNode(node4);
+            linkedList.Display();
+
         }
     }
 }
