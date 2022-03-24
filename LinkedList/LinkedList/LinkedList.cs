@@ -129,5 +129,40 @@ namespace LinkedList
             }
             return false;
         }
+
+        public void AddSpecificNode(Node node, int pos)
+        {
+            
+            if (pos < 1)
+            {
+                Console.WriteLine("select correct position");
+            }
+            else if (pos == 1)
+            {
+                node.next = Head;
+                Head= node;
+            }
+            else
+            {
+                Node temp = Head;
+                for(int i = 1; i < pos-1; i++)
+                {
+                    if(temp != null)
+                    {
+                        temp = temp.next;
+                    }
+                }
+                if (temp != null)
+                {
+                    node.next = temp.next;
+                    temp.next = node;
+                }
+                else
+                {
+                    Console.WriteLine("Invalid Position");
+                }
+            }           
+        
+        }
     }
 }

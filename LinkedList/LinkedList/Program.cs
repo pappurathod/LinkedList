@@ -5,31 +5,31 @@ namespace LinkedList
     {
         public static void Main(string[] args)
         {
-            LinkedList linkedList = new LinkedList();
+            LinkedList linkedList = new LinkedList();  //UC1
             Node node1 = new Node(22);
             Node node2 = new Node(23);
             Node node3 = new Node(24);
 
-            linkedList.AddNode(node1);
+            linkedList.AddNode(node1);   //UC2
             linkedList.AddNode(node2);
             linkedList.AddNode(node3);
             linkedList.Display();
 
-            Node node4 = new Node(25);
+            Node node4 = new Node(25);  //UC3
             linkedList.AppendNode(node4);
             linkedList.Display();
 
-            Node node5 = new Node(26);
+            Node node5 = new Node(26);        //UC4
             linkedList.AddNodeatStart(node5);
             linkedList.Display();
 
-            linkedList.DeleteNodeatFirst();
+            linkedList.DeleteNodeatFirst();   //UC5
             linkedList.Display();
 
-            linkedList.DeleteEndNode();
+            linkedList.DeleteEndNode();  //UC6
             linkedList.Display();
-
-            Console.WriteLine("Enter Number want to Search");
+            
+            Console.WriteLine("Enter Number want to Search");  //UC7
             int data = int.Parse(Console.ReadLine());
             bool res = linkedList.search(data);
             if (res == true)
@@ -41,6 +41,13 @@ namespace LinkedList
                 Console.WriteLine("Data is not found");
             }
 
+
+            Node node6 = new Node(50);    //UC8
+            linkedList.Display();
+            Console.WriteLine("select position to add new Element");
+            int data1 = int.Parse(Console.ReadLine());
+            linkedList.AddSpecificNode(node6, data1);
+            linkedList.Display();
         }
     }
 }
