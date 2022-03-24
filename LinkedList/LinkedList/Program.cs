@@ -33,20 +33,22 @@ namespace LinkedList
             int data = int.Parse(Console.ReadLine());
             bool res = linkedList.search(data);
             if (res == true)
-            {
-                Console.WriteLine("Data is found");
-            }
-            else
-            {
+                Console.WriteLine("Data is found");            
+            else            
                 Console.WriteLine("Data is not found");
-            }
+            
 
 
             Node node6 = new Node(50);    //UC8
             linkedList.Display();
             Console.WriteLine("select position to add new Element");
-            int data1 = int.Parse(Console.ReadLine());
-            linkedList.AddSpecificNode(node6, data1);
+            data = int.Parse(Console.ReadLine());
+            linkedList.AddSpecificNode(node6, data);
+            linkedList.Display();
+
+            Console.WriteLine("Select node for deletion");  //UC9
+            data = int.Parse(Console.ReadLine());
+            linkedList.DeleteSpecificNode(data);
             linkedList.Display();
         }
     }

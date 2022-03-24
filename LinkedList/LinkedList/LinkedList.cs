@@ -161,8 +161,33 @@ namespace LinkedList
                 {
                     Console.WriteLine("Invalid Position");
                 }
-            }           
-        
+            }                
+        }
+        public void DeleteSpecificNode(int del_data)
+        {
+            if (this.Head == null)
+            {
+                Console.WriteLine("Nothing to delete list is empty");
+            }
+            else
+            {
+                if (Head == null)
+                {
+                    Console.WriteLine("Nothing To Delete");
+                    return;
+                }
+                Node temp = Head;
+                while (temp != null)
+                {
+                    if(temp.next.data == del_data)
+                    {
+                        temp.next=temp.next.next;
+                       
+                        break;
+                    }
+                    temp = temp.next;
+                }              
+            }
         }
     }
 }
