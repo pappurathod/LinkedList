@@ -104,7 +104,6 @@ namespace LinkedList
                 if (Head == null)
                 {
                     Console.WriteLine("Nothing To Delete");
-                    //return;
                 }
                 Node temp = Head;
                 while (temp.next.next != null)
@@ -174,15 +173,13 @@ namespace LinkedList
                 if (Head == null)
                 {
                     Console.WriteLine("Nothing To Delete");
-                    //return;
                 }
                 Node temp = Head;
                 while (temp != null)
                 {
                     if(temp.next.data == del_data)
                     {
-                        temp.next=temp.next.next;
-                       
+                        temp.next=temp.next.next;                       
                         break;
                     }
                     temp = temp.next;
