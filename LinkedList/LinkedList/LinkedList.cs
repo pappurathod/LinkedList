@@ -101,10 +101,6 @@ namespace LinkedList
             }
             else
             {
-                if (Head == null)
-                {
-                    Console.WriteLine("Nothing To Delete");
-                }
                 Node temp = Head;
                 while (temp.next.next != null)
                 {
@@ -169,11 +165,7 @@ namespace LinkedList
                 Console.WriteLine("Nothing to delete list is empty");
             }
             else
-            {
-                if (Head == null)
-                {
-                    Console.WriteLine("Nothing To Delete");
-                }
+            {                
                 Node temp = Head;
                 while (temp != null)
                 {
